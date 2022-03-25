@@ -3,7 +3,6 @@
 require 'metainspector'
 require 'pry'
 require 'nokogiri'
-require 'open-uri'
 
 require_relative 'models/estate'
 require_relative 'models/page'
