@@ -14,12 +14,13 @@ end
 def main
   page = main_page
   # Retorna la primera página de propiedades en alquiler junto con sus links.
-  page.estates
+  # page.estates
 
-  link = page.estates_links.first
-  estate = Estate.new(link)
+  page.estates_links.each do |link|
+    page.add(Estate.new(link))
+  end
 
-  puts "#{estate.title}: #{estate.price} - #{estate.expenses}"
+  page.mostrar_info
 end
 
 main
